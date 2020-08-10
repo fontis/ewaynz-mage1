@@ -1,0 +1,10 @@
+{
+    "name":"fontis/ewaynz",
+    "type":"magento-module",
+    "license":"OSL-3.0",
+    "description":"This extension uses the eWAY New Zealand payment gateway for credit card processing.",
+    "homepage":"https://www.fontis.com.au/eway-new-zealand-magento-extension",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

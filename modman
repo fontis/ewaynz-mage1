@@ -1,0 +1,10 @@
+# modman module description
+# see https://github.com/colinmollenhour/modman/ for more info
+
+# Fontis EwayNz
+src/app/code/community/Fontis/EwayNz                               app/code/community/Fontis/EwayNz
+src/app/etc/modules/Fontis_EwayNz.xml                              app/etc/modules/Fontis_EwayNz.xml
+src/app/design/adminhtml/default/default/template/fontis/ewaynz    app/design/adminhtml/default/default/template/fontis/ewaynz
+src/app/design/frontend/default/default/layout/fontis_ewaynz.xml   app/design/frontend/default/default/layout/fontis_ewaynz.xml
+src/app/design/frontend/default/default/template/fontis/ewaynz     app/design/frontend/default/default/template/fontis/ewaynz
+src/app/locale/en_US/Fontis_EwayNz.csv                             app/locale/en_US/Fontis_EwayNz.csv

@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Fontis eWAY NZ payment gateway
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so you can be sent a copy immediately.
+ *
+ * @category   Fontis
+ * @package    Fontis_EwayNz
+ * @copyright  Copyright (c) 2010 Fontis (http://www.fontis.com.au)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Fontis_EwayNz>
+            <version>1.0.1</version>
+        </Fontis_EwayNz>
+    </modules>
+    <global>
+        <models>
+            <ewaynz>
+                <class>Fontis_EwayNz_Model</class>
+            </ewaynz>
+        </models>
+        <blocks>
+            <ewaynz>
+                <class>Fontis_EwayNz_Block</class>
+            </ewaynz>
+        </blocks>
+        <helpers>
+            <ewaynz>
+                <class>Fontis_EwayNz_Helper</class>
+            </ewaynz>
+        </helpers>
+        <payment>
+            <cc>
+                <types>
+                    <JCB>
+                        <code>JCB</code>
+                        <name>JCB</name>
+                        <order>50</order>
+                    </JCB>
+                    <DICL>
+                        <code>DICL</code>
+                        <name>Diners Club</name>
+                        <order>60</order>
+                    </DICL>
+                </types>
+            </cc>
+        </payment>
+    </global>
+    <frontend>
+        <secure_url>
+            <ewaynz>/ewaynz/shared</ewaynz>
+        </secure_url>
+        <routers>
+            <ewaynz>
+                <use>standard</use>
+                <args>
+                    <module>Fontis_EwayNz</module>
+                    <frontName>ewaynz</frontName>
+                </args>
+            </ewaynz>
+        </routers>
+        <translate>
+            <modules>
+                <Fontis_EwayNz>
+                    <files>
+                        <default>Fontis_EwayNz.csv</default>
+                    </files>
+                </Fontis_EwayNz>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <ewaynz>
+                    <file>fontis_ewaynz.xml</file>
+                </ewaynz>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Fontis_EwayNz>
+                    <files>
+                        <default>Fontis_EwayNz.csv</default>
+                    </files>
+                </Fontis_EwayNz>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <payment>
+            <ewaynz>
+                <active>0</active>
+                <customer_id backend_model="adminhtml/system_config_backend_encrypted"/>
+                <username backend_model="adminhtml/system_config_backend_encrypted"/>
+                <currency>NZD</currency>
+                <model>ewaynz/shared</model>
+                <title>Credit Card</title>
+                <order_status>processing</order_status>
+                <allowspecific>0</allowspecific>
+            </ewaynz>
+        </payment>
+    </default>
+</config>
